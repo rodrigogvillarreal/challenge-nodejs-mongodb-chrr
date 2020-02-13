@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c1a979ce-3d03-4bc0-93ad-f327aab98346",
+		"name": "challenge-nodejs-mongodb-chrr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear un sitio de interes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Parque del Kempes",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"value": "no_disponible.jpg",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Espacio Publico",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3031/sitiosInteres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"sitiosInteres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar los Sitios de Interes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/sitiosInteres?p=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"sitiosInteres"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "patio",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar un sitio por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3031/sitiosInteres/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"sitiosInteres",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un Sitio de Interes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5e455ffec68bc529f45fc16b",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Espacio Verde",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3031/sitioInteresEdit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"sitioInteresEdit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Sitio de Interes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "5e455ffec68bc529f45fc16b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3031/sitioInteresDelete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3031",
+					"path": [
+						"sitioInteresDelete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
